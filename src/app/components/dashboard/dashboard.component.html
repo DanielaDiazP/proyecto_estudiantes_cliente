@@ -1,0 +1,29 @@
+<h1>Panel de control</h1>
+
+<form #studentsForm="ngForm" (ngSubmit)="crearEstudiante(studentsForm.value)">
+  <input type="text" ngModel name="name">
+  <input type="text" ngModel name="email">
+  <input type="text" ngModel name="telefono">
+  <button type="submit">Crear estudiante</button>
+</form>
+
+<table>
+  <tr>
+    <th>Estudiante</th>
+    <th>Correo</th>
+    <th>Teléfono</th>
+    <th>Opciones</th>
+  </tr>
+  <tr *ngFor='let student of students'>
+    <td>{{student.name}}</td>
+    <td>{{student.email}}</td>
+    <td>{{student.telefono}}</td>
+    <td>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i> - 
+      <a (click)="eliminarEstudiante(student._id)">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </a>
+      
+    </td>
+  </tr>
+</table>
