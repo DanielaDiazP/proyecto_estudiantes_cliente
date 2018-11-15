@@ -17,7 +17,7 @@ export class RegistroComponent implements OnInit {
   }
 
   crearUsuario(usuarios){
-    console.log(this.usuarios);
+    console.log(usuarios);
     this.usersService.crear(usuarios).subscribe(usuarios => {
       this.usuarios = usuarios;
     })

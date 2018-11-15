@@ -1,5 +1,33 @@
-<section *ngFor='let student of students'>
+<!--<section *ngFor='let student of students' class="card">
   <h3>Estudiante: {{student.name | titlecase}}</h3>
   <p>Correo: {{student.email | titlecase}}</p>
   <p>Telefono: {{student.telefono | titlecase}}</p>
 </section>
+-->
+<div class="card">
+  <section>
+    <article *ngFor='let student of students'>
+      <h3>Estudiante: {{student.name}}</h3>
+      <p>Correo: {{student.email}}</p>
+      <p>Telefono: {{student.telefono}}</p>
+      
+    </article>
+  </section>
+  <footer>
+    <p>&copy; Derechos reservados</p>
+  </footer>
+</div>
+<!--
+  <div class="card" *ngFor='let student of students'>{{student.name}}</div>
+  <mat-card *ngFor='let student of students' class="card">
+  <mat-card-header>
+    <mat-card-title>Estudiante: {{student.name}}</mat-card-title>
+    <mat-card-title>Correo: {{student.email}}</mat-card-title>
+    
+    </mat-card-header>
+    <mat-card-content>
+      <p>Telefono: {{student.telefono}}</p>
+    </mat-card-content>
+</mat-card>
+<app-estudiantes></app-estudiantes>
+-->

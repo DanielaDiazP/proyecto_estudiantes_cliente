@@ -13,6 +13,10 @@ import { HomeComponent } from './components/home/home.component';
 //services
 import { EstudiantesService } from './_services/estudiantes.service';
 import { UsersService } from './_services/users.service';
+//material
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+ 
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { UsersService } from './_services/users.service';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [EstudiantesService, UsersService],
   bootstrap: [AppComponent]

@@ -1,0 +1,22 @@
+*{
+    text-align: center;
+}
+
+.login{
+    
+    height: 20vh;
+}
+
+.span{
+    margin: auto 0;
+    flex: 1 1 auto;
+    text-align: center !important;
+}
+
+.texto{
+    text-align: center;
+}
+
+.ingresar{
+    margin-left: 95%;
+}

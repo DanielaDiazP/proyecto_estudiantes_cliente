@@ -1,12 +1,30 @@
-<h1>Panel de control</h1>
+<!--<h1>Panel de control</h1>-->
 
+
+<mat-toolbar style="background-color:#424242">
+  <span>Registrar estudiantes</span></mat-toolbar>
+  <div class="crear">
+      <button mat-raised-button  routerLink="" color="warn">Salir</button></div>
+  <form>
+  <br>
 <form #studentsForm="ngForm" (ngSubmit)="crearEstudiante(studentsForm.value)">
-  <input type="text" ngModel name="name">
-  <input type="text" ngModel name="email">
-  <input type="text" ngModel name="telefono">
-  <button type="submit">Crear estudiante</button>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre" ngModel name="name">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" ngModel name="email">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Teléfono" ngModel name="telefono">
+  </mat-form-field>
+  <br>
+  <button mat-raised-button type="submit"  color="warn">Crear Estudiante</button>
+  
 </form>
-
+<br>
+<!--
 <table>
   <tr>
     <th>Estudiante</th>
@@ -27,3 +45,39 @@
     </td>
   </tr>
 </table>
+-->
+
+
+<table mat-table [dataSource]="students" class="mat-elevation-z8">-->
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Nombre</th>
+      <td mat-cell *matCellDef="let student"> {{student.name}} </td> 
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Correo">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center"> Correo </th>
+      <td mat-cell *matCellDef="let student"> {{student.email}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Telefono">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center"> Telefono </th>
+      <td mat-cell *matCellDef="let student"> {{student.telefono}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Opciones">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center"> Opciones </th>
+        <td mat-cell *matCellDef="let student"> <a (click)="eliminarEstudiante(student._id)">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </a> </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

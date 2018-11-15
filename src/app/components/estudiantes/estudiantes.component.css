@@ -1,0 +1,48 @@
+.card {
+    display: grid;
+    grid-template-rows: 10vh auto 10vh;
+    width: 100vw;
+  }
+
+  section{
+    background-color: #ffffff;
+    display: grid;
+    grid-template: auto/repeat(4, 22vw);
+    grid-gap: 2em 0;
+    justify-content: space-around;
+    padding: 1.5em 0;
+    width: 100vw;
+  }
+
+section article{
+    background-color: #f5a9a9;
+    border-radius: 5px;
+    margin: 15px;
+  box-shadow: 2px 2px 5px 1px #b8b8b8;
+  color: #303032;
+  height: 25vh;
+  padding: 1em 0.5;
+  text-align: center;
+}
+
+section article:hover{
+  opacity: 0.8;
+  transition-duration: 0.5s;
+}
+
+footer{
+  align-items: center;
+  background-color: #424242;
+  display: flex;
+  justify-content: center;
+  width: 99vw;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p{
+  color: #ffffff;
+}
+
+
+

@@ -1,10 +1,29 @@
-<form #usersForm="ngForm" (ngSubmit)="crearUsuario(usersForm.value)">
+<!--<form #usersForm="ngForm" (ngSubmit)="crearUsuario(usersForm.value)">
   <input type="text" ngModel name="user_name">
   <input type="text" ngModel name="email">
   <input type="text" ngModel name="password">
-  <button type="submit">Registrarse</button>
-</form>
+  
+</form>-->
+<mat-toolbar style="background-color:#424242">REGISTRARSE</mat-toolbar>
+<div class="registrar">
+    <button mat-raised-button  routerLink="" color="warn">Salir</button></div>
 
+    <br>
+<form #userForm="ngForm" (ngSubmit)="crearUsuario(userForm.value)">
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="username" ngModel name="user_name">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="email" ngModel name="email">
+</mat-form-field>
+<br>
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="password" ngModel name="password">
+</mat-form-field>
+<br>
+<button mat-raised-button type="submit" color="warn">Registrarse</button>
+</form>
 <!--<form action="">
   <input type="email">
   <input type="password" name="" id="">

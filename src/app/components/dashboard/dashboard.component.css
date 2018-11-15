@@ -1,0 +1,21 @@
+*{
+    text-align: center;
+}
+
+.span{
+    text-align: center;
+}
+
+.estudiantes{
+    height: 20vh;
+}
+
+table{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.crear{
+    margin-left: 95%;
+}

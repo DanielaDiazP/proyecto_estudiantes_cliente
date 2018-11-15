@@ -9,6 +9,8 @@ import { EstudiantesService } from '../../_services/estudiantes.service';
 })
 export class DashboardComponent implements OnInit {
   protected students: Students[] = [];
+  //displayedColumns: string[] = ['name', 'email', 'telefono'];
+  displayedColumns: string[] = ['Nombre', 'Correo', 'Telefono', 'Opciones'];
   estudiantes:any = {};
 
   constructor(private estudiantesService: EstudiantesService) { }
